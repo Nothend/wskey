@@ -77,7 +77,7 @@ def wstopt(cookies):
     url += '?' + urlencode(params)
     session.get(url, allow_redirects=True)
     result = ""
-    for k, v in .cookies.items():
+    for k, v in cookies.items():
         if k == 'pt_key' or k == 'pt_pin':
             result += k + "=" + v + "; "
     if result[0:15] == 'pt_key=app_open':
